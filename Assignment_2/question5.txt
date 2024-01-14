@@ -1,0 +1,16 @@
+Q5. Difference between --force push and --force-with-lease, You have to show the use of both, also you have to show in what scenario --force-with-lease is used?
+
+git --force push
+It is use to forcefuly push the changes from local repository to remote repository
+
+Scenario
+suppose we have commited changes and push it to remogte repository and someone has cloned that repository now you are try to change the commit message it will not allow you to push that to git remote then you need to use git -force push
+
+git --force-with-lease
+- suppose different people p1,p2 are working on project
+- p1 has created the repository and p2 has cloned the repository
+- p2 ahs pushed some changes to the same branch
+- p1 performs some local commit and which can overwrite the changes of p2
+- then --force-with-lease will not allow to push the changes
+
+
